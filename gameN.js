@@ -128,5 +128,5 @@ function checkSolution() {
     }
     i += 2;
   }
-  alert("Собрано!");
+  alert("Solved!");
 }
