@@ -1,0 +1,32 @@
+.gameCell {
+  font-size: 25px;
+  text-align: center;
+  color: black;
+  width: 100px;
+	height: 100px;
+	background: deepskyblue;
+}
+
+.tableDiv {
+  text-align: center;
+}
+.clearCell {
+  width: 100px;
+  height: 100px;
+  background: lightgrey;
+}
+
+.table {
+  display:inline-block;
+  position: relative;
+}
+
+.radioB {
+  position: relative;   
+  text-align: center;
+}
+
+.genB {
+  text-align: center;
+  width: -0.5em;
+}
