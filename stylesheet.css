@@ -5,6 +5,7 @@
   width: 100px;
   height: 100px;
   background: deepskyblue;
+  transition: background-color 2s;
 }
 
 .tableDiv {
@@ -14,6 +15,7 @@
   width: 100px;
   height: 100px;
   background: lightgrey;
+  transition: background-color 0.5s;
 }
 
 .table {
