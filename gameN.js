@@ -79,9 +79,10 @@ function Rand(size) {
     let tmp = new Array();
     for (let i = 0; i < size; i++) {
       for (let j = 0; j < size; j++) {
-        tmp[i * size + j] =__randNumbers[j * size + i];
+        tmp[i * size + j] =__randNumbers[j * size + size - i - 1];
       }
     }
+    __randNumber = tmp;
   } 
   
 }
