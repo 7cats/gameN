@@ -45,17 +45,18 @@ function Rand(size) {
   for (let i = 0; i < size  * size;) { 
     let randN = Math.floor(Math.random() * this.__randNumbers.length);
     if (!this.__usedNumbers[randN]) {
-      goodNumbers += randN == 0 ? Math.ceil((i + 1) / size) : 0;
-      
+      if (size % 2 === 0 && randN === 0) {
+        goodNumbers += Math.ceil((i + 1) / size);
+      }
       this.__usedNumbers[randN] = true;
-      this.__randNumbers[i] = randN;
+      this.__randNumbers[i]     = randN;
       i++;
     }    
   } 
   
   for (let i = 0; i < size * size - 1; i++) {
     for (let j = i + 1; j < size * size; j++) {
-      if (this.__randNumbers[i] > this.__randNumbers[j]) {
+      if (this.__randNumbers[i] !== 0 && this.__randNumbers[i] > this.__randNumbers[j]) {
         goodNumbers++;
       }
     }
@@ -82,7 +83,9 @@ function Rand(size) {
         tmp[i * size + j] =__randNumbers[j * size + size - i - 1];
       }
     }
-    __randNumber = tmp;
+    for (let i = 0; i < tmp.length; i++) {
+      __randNumbers[i] = tmp[i];
+    }
   } 
   
 }
